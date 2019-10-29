@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>curl on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/curl/</link>
+    <description>Recent content in curl on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 18:48:41 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/curl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Curl</title>
+      <link>http://zhongyu2005.github.io/posts/php-curl/</link>
+      <pubDate>Tue, 29 Oct 2019 18:48:41 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-curl/</guid>
+      <description>curl commonfunc function http($url, $data, $params = [], &amp;amp;$error) { $timeout = isset($params[&#39;timeout&#39;]) ? $params[&#39;timeout&#39;] : 10; // 默认超时时间是10秒 $curl = curl_init(); curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0); curl_setopt($curl, CURLOPT_URL, $url); curl_setopt($curl, CURLOPT_TIMEOUT, $timeout); //超时时间 curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 0); //在发起连接前等待的时间，如果设置为0，则不等待 if (!empty($data)) { curl_setopt($curl, CURLOPT_POST, 1); curl_setopt($curl, CURLOPT_POSTFIELDS, $data); } curl_setopt($curl, CURLOPT_SSLVERSION, 1); //升级ssl curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); //ssl curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false); //ssl curl_setopt($curl, CURLINFO_HEADER_OUT, true); $UserAgent = &#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.</description>
+    </item>
+    
+  </channel>
+</rss>

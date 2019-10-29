@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Spade Three  | Php Db</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Php Db" />
+<meta property="og:description" content="php sqlite public function getSqlite($path) { if (empty($this-&gt;dbs[$path])) { $this-&gt;dbs[$path] = new \SQLite3($path); } return $this-&gt;dbs[$path]; } public function dbExec($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } return $sm-&gt;execute(); // $db-&gt;lastErrorMsg() } public function dbQueryOne($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } $res = $sm-&gt;execute(); $row = $res-&gt;fetchArray(SQLITE3_ASSOC); return $row; } public function dbQueryAll($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zhongyu2005.github.io/posts/php-db/" />
+<meta property="article:published_time" content="2019-10-29T19:09:38+08:00" />
+<meta property="article:modified_time" content="2019-10-29T19:09:38+08:00" />
+<meta itemprop="name" content="Php Db">
+<meta itemprop="description" content="php sqlite public function getSqlite($path) { if (empty($this-&gt;dbs[$path])) { $this-&gt;dbs[$path] = new \SQLite3($path); } return $this-&gt;dbs[$path]; } public function dbExec($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } return $sm-&gt;execute(); // $db-&gt;lastErrorMsg() } public function dbQueryOne($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } $res = $sm-&gt;execute(); $row = $res-&gt;fetchArray(SQLITE3_ASSOC); return $row; } public function dbQueryAll($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!">
+
+
+<meta itemprop="datePublished" content="2019-10-29T19:09:38&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-29T19:09:38&#43;08:00" />
+<meta itemprop="wordCount" content="237">
+
+
+
+<meta itemprop="keywords" content="php,db,mysql,sqlite," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Php Db"/>
+<meta name="twitter:description" content="php sqlite public function getSqlite($path) { if (empty($this-&gt;dbs[$path])) { $this-&gt;dbs[$path] = new \SQLite3($path); } return $this-&gt;dbs[$path]; } public function dbExec($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } return $sm-&gt;execute(); // $db-&gt;lastErrorMsg() } public function dbQueryOne($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } $res = $sm-&gt;execute(); $row = $res-&gt;fetchArray(SQLITE3_ASSOC); return $row; } public function dbQueryAll($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://zhongyu2005.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Spade Three
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Php Db</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-10-29T19:09:38&#43;08:00">October 29, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h4 id="php-sqlite">php sqlite</h4>
+
+<pre><code class="language-php">
+public function getSqlite($path)
+{
+    if (empty($this-&gt;dbs[$path])) {
+        $this-&gt;dbs[$path] = new \SQLite3($path);
+    }
+    return $this-&gt;dbs[$path];
+}
+
+public function dbExec($db, $sql,$bindParam)
+{
+    $sm=$db-&gt;prepare($sql);
+    if(!empty($bindParam)){
+        foreach ($bindParam as $key=&gt;$val) {
+            $sm-&gt;bindValue($key, $val);
+        }
+    }
+    return $sm-&gt;execute();
+    // $db-&gt;lastErrorMsg()
+}
+
+public function dbQueryOne($db, $sql,$bindParam)
+{
+    $sm=$db-&gt;prepare($sql);
+    if(!empty($bindParam)){
+        foreach ($bindParam as $key=&gt;$val) {
+            $sm-&gt;bindValue($key, $val);
+        }
+    }
+    $res = $sm-&gt;execute();
+    $row = $res-&gt;fetchArray(SQLITE3_ASSOC);
+    return $row;
+}
+
+public function dbQueryAll($db, $sql,$bindParam)
+{
+    $sm=$db-&gt;prepare($sql);
+    if(!empty($bindParam)){
+        foreach ($bindParam as $key=&gt;$val) {
+            $sm-&gt;bindValue($key, $val);
+        }
+    }
+    $res = $sm-&gt;execute();
+    $list = [];
+    while ($row = $res-&gt;fetchArray(SQLITE3_ASSOC)) {
+        $list[] = $row;
+    }
+    return $list;
+}
+
+$app=$this-&gt;getUtils();
+$sql=&quot; INSERT INTO com_word_record values(null,:unique_id,:type,:source_path,:target_path,:status,:consume_time,:time_of_day,:create_at,:update_at,0) &quot;;
+$params=[
+    ':unique_id'=&gt;$app-&gt;generateUniqueid('htm'),
+    ':type'=&gt;2,//1docxToHtml,2htmlToDocx
+    ':source_path'=&gt;'html'.$name,
+    ':target_path'=&gt;'',
+    ':status'=&gt;0,//0start,1running,2finish,10error
+    ':consume_time'=&gt;0,
+    ':time_of_day'=&gt;date(&quot;Ymd&quot;),
+    ':create_at'=&gt;$time,
+    ':update_at'=&gt;$time,
+];
+ $flag=$app-&gt;dbExec($db,$sql,$params);
+
+
+</code></pre>
+
+<h4 id="php-mysql">php mysql</h4>
+
+<pre><code class="language-php">
+$mysql=new \PDO('mysql:host='.$host.';dbname='.$db,$user,$password);
+$mysql-&gt;exec(&quot;SET NAMES 'utf8mb4'&quot;);
+//抛异常
+$mysql-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
+//不报错
+//$mysql-&gt;setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_SILENT);
+
+function mysqlInsert($tab,array $set){
+    $sql=&quot;INSERT INTO %s (%s) values(%s) &quot;;
+    $key=$pre=$val=[];
+    foreach ($set as $k =&gt; $v) {
+        $key[]='`'.$k.'`';
+        $pre[]='?';
+        $val[]=$v;
+    }
+    $sql=sprintf($sql, $tab, implode(',', $key), implode(',', $pre));
+    if(empty($db)){
+        return [$sql,$val];
+    }
+    $sth=$db-&gt;prepare($sql);
+    $r=$sth-&gt;execute($val);
+    if($r){
+        return $this-&gt;db-&gt;lastInsertId();
+    }
+    return $r;
+}
+
+
+function mysqlUpdate($tab,$where,array $set){
+    $sql='UPDATE `'.$tab.'` SET ';
+    $key=$val=[];
+    foreach ($set as $k =&gt; $v) {
+        $key[]='`'.$k.'`=?';
+        $val[]=$v;
+    }
+    $sql.=implode(',', $key) .' WHERE '.$where;
+    if (empty($db)) {
+        return [$sql,$val];
+    }
+    $sth=$db-&gt;prepare($sql);
+    $r=$sth-&gt;execute($val);
+    if ($r) {
+        //返回受影响的行数
+        return $sth-&gt;rowCount();
+    }
+    //返回true or false
+    return $r;
+}
+
+function mysqlSelect($select,$tab,$where){
+    $sql=&quot;SELECT {$select} FROM {$tab} WHERE {$where}&quot;;
+    if (empty($this-&gt;db)) {
+        return $sql;
+    }
+    $res=$db-&gt;query($sql);
+    $list=[];
+    while ($r=$res-&gt;fetch(\PDO::FETCH_OBJ)) {
+        $list[]=$r;
+    }
+    return $list;
+}
+
+
+</code></pre>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/php" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">php</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/db" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">db</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/mysql" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">mysql</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/sqlite" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">sqlite</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/php-upload/">Php Upload</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-date/">Php Date</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-curl/">Php Curl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-ip/">Php Ip</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-filter/">Php Filter</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-composer/">Php Composer</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-ini/">Php Ini</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://zhongyu2005.github.io" >
+    &copy; 2019 Spade Three
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

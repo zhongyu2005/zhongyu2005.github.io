@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ip on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/ip/</link>
+    <description>Recent content in ip on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 18:47:31 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/ip/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Ip</title>
+      <link>http://zhongyu2005.github.io/posts/php-ip/</link>
+      <pubDate>Tue, 29 Oct 2019 18:47:31 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-ip/</guid>
+      <description> php getId function getIP() { if (isset($_SERVER)) { if (isset($_SERVER[&#39;HTTP_X_FORWARDED_FOR&#39;])) { $realip = $_SERVER[&#39;HTTP_X_FORWARDED_FOR&#39;]; } elseif (isset($_SERVER[&#39;HTTP_CLIENT_IP&#39;])) { $realip = $_SERVER[&#39;HTTP_CLIENT_IP&#39;]; } else { $realip = $_SERVER[&#39;REMOTE_ADDR&#39;]; } } else { if (getenv(&amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;)) { $realip = getenv( &amp;quot;HTTP_X_FORWARDED_FOR&amp;quot;); } elseif (getenv(&amp;quot;HTTP_CLIENT_IP&amp;quot;)) { $realip = getenv(&amp;quot;HTTP_CLIENT_IP&amp;quot;); } else { $realip = getenv(&amp;quot;REMOTE_ADDR&amp;quot;); } } if(empty($realip) || strtolower($realip)==&#39;unknown&#39;){ return &#39;&#39;; } return $realip; }  </description>
+    </item>
+    
+  </channel>
+</rss>

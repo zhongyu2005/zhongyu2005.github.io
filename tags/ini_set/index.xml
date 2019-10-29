@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ini_set on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/ini_set/</link>
+    <description>Recent content in ini_set on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 17:55:38 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/ini_set/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Ini</title>
+      <link>http://zhongyu2005.github.io/posts/php-ini/</link>
+      <pubDate>Tue, 29 Oct 2019 17:55:38 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-ini/</guid>
+      <description>ini_set ini_set(&#39;display_errors&#39;, true);//开启错误信息显示 ini_set(&amp;quot;error_log&amp;quot;, __DIR__.&#39;/&#39;. date(&#39;Y-m-d&#39;) . &amp;quot;.log&amp;quot;);//设置php错误路径 ini_set(&#39;date.timezone&#39;,&#39;Asia/Shanghai&#39;); ini_set(&#39;max_execution_time&#39;, 0);//不限制执行时间 ini_set(&#39;magic_quotes_runtime&#39;, 0);//关闭自动反斜线转移引号 ini_set(&#39;memory_limit&#39;, &#39;512M&#39;); ignore_user_abort(true); // 后台运行 set_time_limit(0); // 取消脚本运行时间的超时上限  header  header(&amp;quot;Content-type: text/html; charset=utf-8&amp;quot;); header(&#39;Content-Type:application/json; charset=utf-8&#39;); header(&#39;Access-Control-Allow-Origin:*&#39;); header(&amp;quot;Access-Control-Allow-Methods&amp;quot;,&amp;quot;POST&amp;quot;); header(&amp;quot;Access-Control-Allow-Credentials&amp;quot;,&amp;quot;true&amp;quot;); header(&#39;Access-Control-Allow-Headers:x-requested-with,content-type&#39;); header(&amp;quot;HTTP/1.1 404 Not Found&amp;quot;); header(&amp;quot;Status: 404 Not Found&amp;quot;);  memory  function getMemory($real = false) { $size = memory_get_usage($real); $unit = array(&#39;b&#39;, &#39;kb&#39;, &#39;mb&#39;, &#39;gb&#39;, &#39;tb&#39;, &#39;pb&#39;); return @round($size / pow(1024, ($i = floor(log($size, 1024)))), 2) .</description>
+    </item>
+    
+  </channel>
+</rss>

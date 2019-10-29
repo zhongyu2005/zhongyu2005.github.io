@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>date on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/date/</link>
+    <description>Recent content in date on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 18:54:57 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/date/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Date</title>
+      <link>http://zhongyu2005.github.io/posts/php-date/</link>
+      <pubDate>Tue, 29 Oct 2019 18:54:57 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-date/</guid>
+      <description> php date $date = new \DateTime(null, new \DateTimeZone(&amp;quot;PRC&amp;quot;)); $ymd = $date-&amp;gt;format(&amp;quot;Y-m-d H:i:s&amp;quot;); $time = $date-&amp;gt;getTimestamp(); $date-&amp;gt;modify(&amp;quot;-1 day -1 hour &amp;quot;);//减一天，减一个小时 $date-&amp;gt;modify(&amp;quot;this week today&amp;quot;);//本周第一天，周一开始，仅保留年月日 $diff=$date-&amp;gt;diff(new \DateTime(&#39;20191001&#39;,new \DateTimeZone(&amp;quot;PRC&amp;quot;))); $s=$diff-&amp;gt;format(&amp;quot;相差%Y年%m月%d日 %H时%i分%s秒&amp;quot;);  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>filter on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/filter/</link>
+    <description>Recent content in filter on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 18:35:24 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/filter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Filter</title>
+      <link>http://zhongyu2005.github.io/posts/php-filter/</link>
+      <pubDate>Tue, 29 Oct 2019 18:35:24 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-filter/</guid>
+      <description>filter 验证 ip $ip = &amp;quot;192.168.0.1&amp;quot;; //$ip = &amp;quot;2001:0db8:85a3:08d3:1319:8a2e:0370:7334&amp;quot;; if(!filter_var($ip, FILTER_VALIDATE_IP,FILTER_FLAG_IPV6)){ echo &amp;quot;IP is not valid&amp;quot;; }else { echo &amp;quot;IP is valid&amp;quot;; }  filter 验证 email $email = &amp;quot;someone@example.com&amp;quot;; if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ echo &amp;quot;E-mail is not valid&amp;quot;; }else{ echo &amp;quot;E-mail is valid&amp;quot;; }  filter 验证 email $email = &amp;quot;someone@example.com&amp;quot;; if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ echo &amp;quot;E-mail is not valid&amp;quot;; }else{ echo &amp;quot;E-mail is valid&amp;quot;; }  filter 验证 email $url = &amp;quot;http://www.</description>
+    </item>
+    
+  </channel>
+</rss>

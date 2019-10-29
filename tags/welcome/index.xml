@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>welcome on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/welcome/</link>
+    <description>Recent content in welcome on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 12:51:26 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/welcome/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>welcome</title>
+      <link>http://zhongyu2005.github.io/posts/welcome/</link>
+      <pubDate>Tue, 29 Oct 2019 12:51:26 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/welcome/</guid>
+      <description> Welcom to spade. hugo help
+hugo version hugo new site xxx hugo new posts/welcome.md hugo server -D hugo (cp -R public ../../spade.github.io)  config.tomal
+baseURL = &amp;quot;http://zhongyu2005.github.io&amp;quot; languageCode = &amp;quot;en-us&amp;quot; title = &amp;quot;Spade Three&amp;quot; theme = &amp;quot;ananke&amp;quot; [taxonomies] tag = &amp;quot;tags&amp;quot;  posts/welcome.md
+--- title: &amp;quot;welcome&amp;quot; date: 2019-10-29T12:51:26+08:00 tags: [&amp;quot;welcome&amp;quot;] --- Welcom to spade. xxxx  </description>
+    </item>
+    
+  </channel>
+</rss>

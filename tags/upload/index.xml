@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>upload on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/upload/</link>
+    <description>Recent content in upload on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Oct 2019 19:04:51 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/upload/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Upload</title>
+      <link>http://zhongyu2005.github.io/posts/php-upload/</link>
+      <pubDate>Tue, 29 Oct 2019 19:04:51 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-upload/</guid>
+      <description>upload php $file = $_FILES[&#39;file&#39;]; if (empty($file)) { return log(&amp;quot;未获取到上传数据&amp;quot;, 1); } $maxSize = 1024 * 1024 * 3;//3m if ($file[&#39;size&#39;] &amp;gt; $maxSize) { return log(&amp;quot;上传数据大小超过限制&amp;quot;, 1); } if (!in_array($file[&#39;type&#39;], [&#39;image/jpeg&#39;, &#39;image/png&#39;, &#39;image/gif&#39;])) { log(&amp;quot;上传文件类型不正确&amp;quot;, 1); } $suffix = pathinfo($file[&#39;name&#39;], PATHINFO_EXTENSION); //文件后缀 $suffix = strtolower($suffix); if (!in_array($suffix, array(&#39;jpg&#39;, &#39;png&#39;, &#39;gif&#39;, &#39;jpeg&#39;))) { return log(&amp;quot;上传文件类型不正确&amp;quot;, 1); } $path = __DIR__ . &#39;/img&#39;; $name = &#39;/&#39; . date(&amp;quot;Ym&amp;quot;) . &#39;/&#39; . md5(uniqid(&#39;dp&#39;, true)) .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <title>Spade Three  | db</title>
+    <title>Spade Three  | mongodb</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1">
     <meta name="generator" content="Hugo 0.59.0" />
     
@@ -25,22 +25,22 @@
 
     
     
-      <link href="/tags/db/index.xml" rel="alternate" type="application/rss+xml" title="Spade Three" />
-      <link href="/tags/db/index.xml" rel="feed" type="application/rss+xml" title="Spade Three" />
+      <link href="/tags/mongodb/index.xml" rel="alternate" type="application/rss+xml" title="Spade Three" />
+      <link href="/tags/mongodb/index.xml" rel="feed" type="application/rss+xml" title="Spade Three" />
       
     
     
-    <meta property="og:title" content="db" />
+    <meta property="og:title" content="mongodb" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="http://zhongyu2005.github.io/tags/db/" />
+<meta property="og:url" content="http://zhongyu2005.github.io/tags/mongodb/" />
 
 <meta property="og:updated_time" content="2019-10-30T18:05:08+08:00" />
-<meta itemprop="name" content="db">
+<meta itemprop="name" content="mongodb">
 <meta itemprop="description" content="">
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="db"/>
+<meta name="twitter:title" content="mongodb"/>
 <meta name="twitter:description" content=""/>
 
   </head>
@@ -88,7 +88,7 @@
 
       <div class="tc-l pv3 ph3 ph4-ns">
         <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
-          db
+          mongodb
         </h1>
         
       </div>
@@ -100,7 +100,7 @@
       
   <article class="cf pa3 pa4-m pa4-l">
     <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
-      <p>Below you will find pages that utilize the taxonomy term “db”</p>
+      <p>Below you will find pages that utilize the taxonomy term “mongodb”</p>
     </div>
   </article>
   <div class="mw8 center">    
@@ -117,23 +117,6 @@
     </h1>
     <div class="nested-links f5 lh-copy nested-copy-line-height">
       mongodb gis  https://github.com/mongodb/mongo-php-library // 加入composer支持 require_once __DIR__ . &quot;/vendor/autoload.php&quot;; $action=''; if($action=='setIndex'){ $collection = ( new MongoDB\Client )-&gt;momo-&gt;user; $result = $collection-&gt;createIndex(array('loc'=&gt;'2dsphere')); var_dump( $result ); exit; } if($acion=='create'){ $collection = ( new MongoDB\Client )-&gt;momo-&gt;user; $longitude='113.281777'; $latitude='23.171306'; $i=2; //id=1,113.332406,23.123305 $insert = $collection-&gt;insertOne( [ '_id' =&gt; $i, 'loc' =&gt; array( 'type' =&gt; 'Point', 'coordinates' =&gt; array( floatval( $longitude ), floatval( $latitude ) ), ), ]); var_dump( $insert ); } if($action=='query'){ $database = ( new MongoDB\Client )-&gt;momo; $cursor = $database-&gt;command( array( 'geoNear' =&gt; 'user', 'near' =&gt; array( 'type' =&gt; 'Point', 'coordinates' =&gt; array( 113.
-    </div>
-  </div>
-</div>
-
-        </div>
-      
-        <div class="relative w-100  mb4 bg-white">
-          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://zhongyu2005.github.io/posts/php-db/" class="link black dim">
-        Php Db
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      php sqlite public function getSqlite($path) { if (empty($this-&gt;dbs[$path])) { $this-&gt;dbs[$path] = new \SQLite3($path); } return $this-&gt;dbs[$path]; } public function dbExec($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } return $sm-&gt;execute(); // $db-&gt;lastErrorMsg() } public function dbQueryOne($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } $res = $sm-&gt;execute(); $row = $res-&gt;fetchArray(SQLITE3_ASSOC); return $row; } public function dbQueryAll($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!
     </div>
   </div>
 </div>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Spade Three  | Php Amqp</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Php Amqp" />
+<meta property="og:description" content="rabbitmqctl rabbitmq-server start rabbitmq-server status rabbitmq-server stop 简单管理 查看所有用户 rabbitmqctl list_users 查看某个用户的权限 rabbitmqctl list_user_permissions username 删除某个用户 rabbitmqctl list_user_permissions username 添加某个用户 rabbitmqctl add_user username password 设置用户tag rabbitmqctl set_user_tags username administrator 授权某个用户 rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot; 开启web管理界面 127.0.0.1:15672 rabbitmq-plugins enable rabbitmq_management  php-amqp #安装好phpamqp的扩展 $config=[ &#39;host&#39; =&gt; &#39;127.0.0.1&#39;, &#39;port&#39; =&gt; 5672, &#39;login&#39; =&gt; &#39;username&#39;, &#39;password&#39; =&gt; &#39;your pass&#39;, &#39;vhost&#39; =&gt; &#39;/&#39;, &#39;heartbeat&#39; =&gt; 60, ] 删除某个Exchange 和 Queue $con = new \AMQPConnection($config); $con-&gt;connect(); $channel = new \AMQPChannel($con); $exchange = new \AMQPExchange($channel); $exchange-&gt;delete(&#39;your exchange name&#39;); $queue = new \AMQPQueue($channel); $queue-&gt;setName(&#39;your queue name&#39;); $queue-&gt;delete(); $con-&gt;disconnect();  重试队列1 （注意expiration 时间，可能受队列先后顺序影响." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zhongyu2005.github.io/posts/php-amqp/" />
+<meta property="article:published_time" content="2019-10-30T17:20:14+08:00" />
+<meta property="article:modified_time" content="2019-10-30T17:20:14+08:00" />
+<meta itemprop="name" content="Php Amqp">
+<meta itemprop="description" content="rabbitmqctl rabbitmq-server start rabbitmq-server status rabbitmq-server stop 简单管理 查看所有用户 rabbitmqctl list_users 查看某个用户的权限 rabbitmqctl list_user_permissions username 删除某个用户 rabbitmqctl list_user_permissions username 添加某个用户 rabbitmqctl add_user username password 设置用户tag rabbitmqctl set_user_tags username administrator 授权某个用户 rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot; 开启web管理界面 127.0.0.1:15672 rabbitmq-plugins enable rabbitmq_management  php-amqp #安装好phpamqp的扩展 $config=[ &#39;host&#39; =&gt; &#39;127.0.0.1&#39;, &#39;port&#39; =&gt; 5672, &#39;login&#39; =&gt; &#39;username&#39;, &#39;password&#39; =&gt; &#39;your pass&#39;, &#39;vhost&#39; =&gt; &#39;/&#39;, &#39;heartbeat&#39; =&gt; 60, ] 删除某个Exchange 和 Queue $con = new \AMQPConnection($config); $con-&gt;connect(); $channel = new \AMQPChannel($con); $exchange = new \AMQPExchange($channel); $exchange-&gt;delete(&#39;your exchange name&#39;); $queue = new \AMQPQueue($channel); $queue-&gt;setName(&#39;your queue name&#39;); $queue-&gt;delete(); $con-&gt;disconnect();  重试队列1 （注意expiration 时间，可能受队列先后顺序影响.">
+
+
+<meta itemprop="datePublished" content="2019-10-30T17:20:14&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-30T17:20:14&#43;08:00" />
+<meta itemprop="wordCount" content="299">
+
+
+
+<meta itemprop="keywords" content="php,amqp,rabbitmq," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Php Amqp"/>
+<meta name="twitter:description" content="rabbitmqctl rabbitmq-server start rabbitmq-server status rabbitmq-server stop 简单管理 查看所有用户 rabbitmqctl list_users 查看某个用户的权限 rabbitmqctl list_user_permissions username 删除某个用户 rabbitmqctl list_user_permissions username 添加某个用户 rabbitmqctl add_user username password 设置用户tag rabbitmqctl set_user_tags username administrator 授权某个用户 rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot; 开启web管理界面 127.0.0.1:15672 rabbitmq-plugins enable rabbitmq_management  php-amqp #安装好phpamqp的扩展 $config=[ &#39;host&#39; =&gt; &#39;127.0.0.1&#39;, &#39;port&#39; =&gt; 5672, &#39;login&#39; =&gt; &#39;username&#39;, &#39;password&#39; =&gt; &#39;your pass&#39;, &#39;vhost&#39; =&gt; &#39;/&#39;, &#39;heartbeat&#39; =&gt; 60, ] 删除某个Exchange 和 Queue $con = new \AMQPConnection($config); $con-&gt;connect(); $channel = new \AMQPChannel($con); $exchange = new \AMQPExchange($channel); $exchange-&gt;delete(&#39;your exchange name&#39;); $queue = new \AMQPQueue($channel); $queue-&gt;setName(&#39;your queue name&#39;); $queue-&gt;delete(); $con-&gt;disconnect();  重试队列1 （注意expiration 时间，可能受队列先后顺序影响."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://zhongyu2005.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Spade Three
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Php Amqp</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-10-30T17:20:14&#43;08:00">October 30, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h4 id="rabbitmqctl">rabbitmqctl</h4>
+
+<pre><code class="language-sh">
+rabbitmq-server start
+rabbitmq-server status
+rabbitmq-server stop
+
+简单管理
+查看所有用户
+rabbitmqctl list_users
+查看某个用户的权限
+rabbitmqctl list_user_permissions username
+删除某个用户
+rabbitmqctl list_user_permissions username
+
+添加某个用户
+rabbitmqctl add_user username password
+设置用户tag
+rabbitmqctl set_user_tags username administrator
+授权某个用户
+rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot;
+
+开启web管理界面  127.0.0.1:15672
+rabbitmq-plugins enable rabbitmq_management
+
+</code></pre>
+
+<h4 id="php-amqp">php-amqp</h4>
+
+<pre><code class="language-php">
+#安装好phpamqp的扩展
+
+$config=[
+    'host' =&gt; '127.0.0.1',
+    'port' =&gt; 5672,
+    'login' =&gt; 'username',
+    'password' =&gt; 'your pass',
+    'vhost' =&gt; '/',
+    'heartbeat' =&gt; 60,
+]
+删除某个Exchange 和 Queue
+$con = new \AMQPConnection($config);
+$con-&gt;connect();
+$channel = new \AMQPChannel($con);
+$exchange = new \AMQPExchange($channel);
+$exchange-&gt;delete('your exchange name');
+
+$queue = new \AMQPQueue($channel);
+$queue-&gt;setName('your queue name');
+$queue-&gt;delete();
+
+$con-&gt;disconnect();
+
+</code></pre>
+
+<h4 id="重试队列1-注意expiration-时间-可能受队列先后顺序影响">重试队列1 （注意expiration 时间，可能受队列先后顺序影响.)</h4>
+
+<pre><code class="language-php">
+$con = new \AMQPConnection($config);
+$con-&gt;connect();
+$_channel = new \AMQPChannel($con);
+$_exchange = new \AMQPExchange($_channel);
+$_exchange-&gt;setName(Q_E_DEAD_EVENT);
+$_exchange-&gt;setType(AMQP_EX_TYPE_DIRECT);
+$_exchange-&gt;setFlags(AMQP_DURABLE);
+$_exchange-&gt;declareExchange();
+
+$_queue = new \AMQPQueue($_channel);
+$_queue-&gt;setName(Q_Q_DEAD_EVENT);
+$_queue-&gt;setFlags(AMQP_DURABLE);
+$_queue-&gt;setArgument('x-dead-letter-exchange', Q_E_DEAD_CONSUME);
+$_queue-&gt;setArgument('x-dead-letter-routing-key', Q_Q_DEAD_CONSUME);
+$_queue-&gt;declareQueue();
+
+$_queue-&gt;bind(Q_E_DEAD_EVENT, Q_Q_DEAD_EVENT);
+
+
+$_exchange-&gt;publish($data, Q_Q_DEAD_EVENT, AMQP_NOPARAM, ['delivery_mode' =&gt; 2, 'expiration' =&gt; $expire * 1000]);
+
+
+
+
+$d_channel = new \AMQPChannel($con);
+$d_exchange = new \AMQPExchange($d_channel);
+$d_exchange-&gt;setName(Q_E_DEAD_CONSUME);
+$d_exchange-&gt;setType(AMQP_EX_TYPE_DIRECT);
+$d_exchange-&gt;setFlags(AMQP_DURABLE);
+$d_exchange-&gt;declareExchange();
+
+$d_queue = new \AMQPQueue($d_channel);
+$d_queue-&gt;setName(Q_Q_DEAD_CONSUME);
+$d_queue-&gt;setFlags(AMQP_DURABLE);
+$d_queue-&gt;declareQueue();
+
+$d_queue-&gt;bind(Q_E_DEAD_CONSUME, Q_Q_DEAD_CONSUME);
+
+$_queue-&gt;consume(function ($envelope, $queue) {
+    $msg = $envelope-&gt;getBody();
+    $envelopeID = $envelope-&gt;getDeliveryTag();
+    $queue-&gt;ack($envelopeID);
+}, AMQP_NOPARAM);
+</code></pre>
+
+<h4 id="重试队列2">重试队列2</h4>
+
+<pre><code class="language-php">
+$arguments = [
+    'x-dead-letter-exchange' =&gt; 'delay exchange name',
+    'x-dead-letter-routing-key' =&gt; 'delay queue name',
+];
+
+$con = new \AMQPConnection($config);
+$con-&gt;connect();
+$channel = new \AMQPChannel($con);
+$channel-&gt;qos(0,1);
+$exchange = new \AMQPExchange($channel);
+$exchange-&gt;setName('your exchange name');
+$exchange-&gt;setType(AMQP_EX_TYPE_DIRECT);
+$exchange-&gt;setFlags(AMQP_DURABLE);
+$exchange-&gt;declareExchange();
+
+$queue = new \AMQPQueue($channel);
+$queue-&gt;setName('your queue name');
+$queue-&gt;setFlags(AMQP_DURABLE);
+$queue-&gt;setArguments($arguments);
+$queue-&gt;declareQueue();
+$queue-&gt;bind('your exchange name', 'your routeKey name');
+$queue-&gt;consume($callback,AMQP_NOPARAM||AMQP_AUTOACK)
+
+$callback=function($envelope, $queue){
+    $msg = $envelope-&gt;getBody();
+    $envelopeID = $envelope-&gt;getDeliveryTag();
+
+    if(true){
+        //确认
+        $queue-&gt;ack($envelopeID);
+    }else{
+        //否认,设置了x-dead-letter，则会转发到设定的exchange
+        $queue-&gt;nack($envelopeID);
+    }
+}
+
+//x-dead-letter exchange的设置 (这里只做开启,死信队列开启后，自动根据时间转发)
+
+$arguments = [
+    'x-message-ttl' =&gt; 5000, //延迟5秒
+    'x-dead-letter-exchange' =&gt; 'exchange name',
+    'x-dead-letter-routing-key' =&gt; 'queue name',
+];
+
+$con = new \AMQPConnection($config);
+$con-&gt;connect();
+$channel = new \AMQPChannel($con);
+$channel-&gt;qos(0,1);
+$exchange = new \AMQPExchange($channel);
+$exchange-&gt;setName('your delay exchange name');
+$exchange-&gt;setType(AMQP_EX_TYPE_DIRECT);
+$exchange-&gt;setFlags(AMQP_DURABLE);
+$exchange-&gt;declareExchange();
+
+$queue = new \AMQPQueue($channel);
+$queue-&gt;setName('your delay queue name');
+$queue-&gt;setFlags(AMQP_DURABLE);
+$queue-&gt;setArguments($arguments);
+$queue-&gt;declareQueue();
+$queue-&gt;bind('your delay exchange name', 'your routeKey name');
+//这里开启，让其转发即可
+</code></pre>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/php" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">php</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/amqp" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">amqp</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/rabbitmq" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">rabbitmq</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+  <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+    <p class="f5 b mb3">Related</p>
+    <ul class="pa0 list">
+	   
+	     <li  class="mb2">
+          <a href="/posts/php-redis/">Php Redis</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-db/">Php Db</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-upload/">Php Upload</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-date/">Php Date</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-curl/">Php Curl</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-ip/">Php Ip</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-filter/">Php Filter</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-composer/">Php Composer</a>
+        </li>
+	    
+	     <li  class="mb2">
+          <a href="/posts/php-ini/">Php Ini</a>
+        </li>
+	    
+    </ul>
+</div>
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://zhongyu2005.github.io" >
+    &copy; 2019 Spade Three
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Spade Three  | Py Supervisor</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+    <meta property="og:title" content="Py Supervisor" />
+<meta property="og:description" content="start  pip3 install supervisor echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf vim supervisord.conf(，开启include，set user pass。http) supervisord -c supervisord.conf （，启动） 参考配置如下 localhost:9001端口
+[program:test] command=/usr/bin/php -r &quot;echo date(&#39;Ymd H:i:s&#39;),PHP_EOL;&quot; ; the program (relative uses PATH, can take args) process_name=%(process_num)s ; process_name expr (default %(program_name)s) numprocs=1 ; number of processes copies to start (def 1) directory=/opt/www ; directory to cwd to before exec (def no cwd) priority=999 ; the relative start priority (default 999) autostart=true ; start at supervisord start (default: true) autorestart=true ; when to restart if exited after running (def: unexpected) user=zhongyu ; setuid to this UNIX account to run the program redirect_stderr=true ; redirect proc stderr to stdout (default false) stdout_logfile=/var/log/supervisor/test." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://zhongyu2005.github.io/posts/py-supervisor/" />
+<meta property="article:published_time" content="2019-10-30T18:11:51+08:00" />
+<meta property="article:modified_time" content="2019-10-30T18:11:51+08:00" />
+<meta itemprop="name" content="Py Supervisor">
+<meta itemprop="description" content="start  pip3 install supervisor echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf vim supervisord.conf(，开启include，set user pass。http) supervisord -c supervisord.conf （，启动） 参考配置如下 localhost:9001端口
+[program:test] command=/usr/bin/php -r &quot;echo date(&#39;Ymd H:i:s&#39;),PHP_EOL;&quot; ; the program (relative uses PATH, can take args) process_name=%(process_num)s ; process_name expr (default %(program_name)s) numprocs=1 ; number of processes copies to start (def 1) directory=/opt/www ; directory to cwd to before exec (def no cwd) priority=999 ; the relative start priority (default 999) autostart=true ; start at supervisord start (default: true) autorestart=true ; when to restart if exited after running (def: unexpected) user=zhongyu ; setuid to this UNIX account to run the program redirect_stderr=true ; redirect proc stderr to stdout (default false) stdout_logfile=/var/log/supervisor/test.">
+
+
+<meta itemprop="datePublished" content="2019-10-30T18:11:51&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-30T18:11:51&#43;08:00" />
+<meta itemprop="wordCount" content="326">
+
+
+
+<meta itemprop="keywords" content="python,supervisor,dev ops," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Py Supervisor"/>
+<meta name="twitter:description" content="start  pip3 install supervisor echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf vim supervisord.conf(，开启include，set user pass。http) supervisord -c supervisord.conf （，启动） 参考配置如下 localhost:9001端口
+[program:test] command=/usr/bin/php -r &quot;echo date(&#39;Ymd H:i:s&#39;),PHP_EOL;&quot; ; the program (relative uses PATH, can take args) process_name=%(process_num)s ; process_name expr (default %(program_name)s) numprocs=1 ; number of processes copies to start (def 1) directory=/opt/www ; directory to cwd to before exec (def no cwd) priority=999 ; the relative start priority (default 999) autostart=true ; start at supervisord start (default: true) autorestart=true ; when to restart if exited after running (def: unexpected) user=zhongyu ; setuid to this UNIX account to run the program redirect_stderr=true ; redirect proc stderr to stdout (default false) stdout_logfile=/var/log/supervisor/test."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://zhongyu2005.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Spade Three
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+
+    <header class="mt4 w-100">
+      <p class="f6 b helvetica tracked">
+          
+        POSTS
+      </p>
+      <h1 class="f1 athelas mb1">Py Supervisor</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2019-10-30T18:11:51&#43;08:00">October 30, 2019</time>
+      
+      
+    </header>
+
+    <section class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l">
+
+<h4 id="start">start</h4>
+
+<ul>
+<li>pip3 install supervisor</li>
+<li>echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf</li>
+<li>vim supervisord.conf(，开启include，set user pass。http)</li>
+<li>supervisord -c supervisord.conf （，启动）</li>
+<li>参考配置如下</li>
+
+<li><p>localhost:9001端口</p>
+
+<pre><code class="language-sh">
+[program:test]
+command=/usr/bin/php -r &quot;echo date('Ymd H:i:s'),PHP_EOL;&quot;              ; the program (relative uses PATH, can take args)
+process_name=%(process_num)s ; process_name expr (default %(program_name)s)
+numprocs=1                    ; number of processes copies to start (def 1)
+directory=/opt/www                ; directory to cwd to before exec (def no cwd)
+priority=999                  ; the relative start priority (default 999)
+autostart=true                ; start at supervisord start (default: true)
+autorestart=true        ; when to restart if exited after running (def: unexpected)
+user=zhongyu                   ; setuid to this UNIX account to run the program
+redirect_stderr=true          ; redirect proc stderr to stdout (default false)
+stdout_logfile=/var/log/supervisor/test.log        ; stdout log path, NONE for none; default AUTO
+stdout_logfile_maxbytes=10MB   ; max # logfile bytes b4 rotation (default 50MB)
+stdout_logfile_backups=10     ; # of stdout logfile backups (0 means none, default 10)
+stdout_capture_maxbytes=10MB   ; number of bytes in 'capturemode' (default 0)
+#umask=022                     ; umask for process (default None)
+#startsecs=1                   ; # of secs prog must stay up to be running (def. 1)
+#startretries=3                ; max # of serial start failures when starting (default 3)
+#exitcodes=0                   ; 'expected' exit codes used with autorestart (default 0)
+#stopsignal=QUIT               ; signal used to kill process (default TERM)
+#stopwaitsecs=10               ; max num secs to wait b4 SIGKILL (default 10)
+#stopasgroup=false             ; send stop signal to the UNIX process group (default false)
+#killasgroup=false             ; SIGKILL the UNIX process group (def false)
+#stdout_events_enabled=false   ; emit events on stdout writes (default false)
+#stdout_syslog=false           ; send stdout to syslog with process name (default false)
+#stderr_logfile=/var/log/supervisor/test.log        ; stderr log path, NONE for none; default AUTO
+#stderr_logfile_maxbytes=10MB   ; max # logfile bytes b4 rotation (default 50MB)
+#stderr_logfile_backups=10     ; # of stderr logfile backups (0 means none, default 10)
+#stderr_capture_maxbytes=10MB   ; number of bytes in 'capturemode' (default 0)
+#stderr_events_enabled=false   ; emit events on stderr writes (default false)
+#stderr_syslog=false           ; send stderr to syslog with process name (default false)
+#environment=A=&quot;1&quot;,B=&quot;2&quot;       ; process environment additions (def no adds)
+#serverurl=AUTO                ; override serverurl computation (childutils)
+
+</code></pre></li>
+</ul>
+<ul class="pa0">
+  
+   <li class="list">
+     <a href="/tags/python" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">python</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/supervisor" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">supervisor</a>
+   </li>
+  
+   <li class="list">
+     <a href="/tags/dev-ops" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">dev ops</a>
+   </li>
+  
+</ul>
+<div class="mt6">
+      
+      
+      </div>
+    </section>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://zhongyu2005.github.io" >
+    &copy; 2019 Spade Three
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

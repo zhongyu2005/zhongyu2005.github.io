@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://zhongyu2005.github.io/tags/php/" />
 
-<meta property="og:updated_time" content="2019-10-29T19:09:38+08:00" />
+<meta property="og:updated_time" content="2019-10-30T18:05:08+08:00" />
 <meta itemprop="name" content="php">
 <meta itemprop="description" content="">
 
@@ -105,6 +105,57 @@
   </article>
   <div class="mw8 center">    
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-mongodb/" class="link black dim">
+        Php Mongodb
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mongodb gis  https://github.com/mongodb/mongo-php-library // 加入composer支持 require_once __DIR__ . &quot;/vendor/autoload.php&quot;; $action=''; if($action=='setIndex'){ $collection = ( new MongoDB\Client )-&gt;momo-&gt;user; $result = $collection-&gt;createIndex(array('loc'=&gt;'2dsphere')); var_dump( $result ); exit; } if($acion=='create'){ $collection = ( new MongoDB\Client )-&gt;momo-&gt;user; $longitude='113.281777'; $latitude='23.171306'; $i=2; //id=1,113.332406,23.123305 $insert = $collection-&gt;insertOne( [ '_id' =&gt; $i, 'loc' =&gt; array( 'type' =&gt; 'Point', 'coordinates' =&gt; array( floatval( $longitude ), floatval( $latitude ) ), ), ]); var_dump( $insert ); } if($action=='query'){ $database = ( new MongoDB\Client )-&gt;momo; $cursor = $database-&gt;command( array( 'geoNear' =&gt; 'user', 'near' =&gt; array( 'type' =&gt; 'Point', 'coordinates' =&gt; array( 113.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-amqp/" class="link black dim">
+        Php Amqp
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rabbitmqctl rabbitmq-server start rabbitmq-server status rabbitmq-server stop 简单管理 查看所有用户 rabbitmqctl list_users 查看某个用户的权限 rabbitmqctl list_user_permissions username 删除某个用户 rabbitmqctl list_user_permissions username 添加某个用户 rabbitmqctl add_user username password 设置用户tag rabbitmqctl set_user_tags username administrator 授权某个用户 rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot; 开启web管理界面 127.0.0.1:15672 rabbitmq-plugins enable rabbitmq_management  php-amqp #安装好phpamqp的扩展 $config=[ 'host' =&gt; '127.0.0.1', 'port' =&gt; 5672, 'login' =&gt; 'username', 'password' =&gt; 'your pass', 'vhost' =&gt; '/', 'heartbeat' =&gt; 60, ] 删除某个Exchange 和 Queue $con = new \AMQPConnection($config); $con-&gt;connect(); $channel = new \AMQPChannel($con); $exchange = new \AMQPExchange($channel); $exchange-&gt;delete('your exchange name'); $queue = new \AMQPQueue($channel); $queue-&gt;setName('your queue name'); $queue-&gt;delete(); $con-&gt;disconnect();  重试队列1 （注意expiration 时间，可能受队列先后顺序影响.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-redis/" class="link black dim">
+        Php Redis
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      php connect $host='127.0.0.1'; $port='6389'; $password='pass'; $redis=new \Redis(); $redis-&gt;connect($host,$port,100); //$redis-&gt;auth($password); $redis-&gt;select(0);  cache $redis-&gt;set(&quot;abc&quot;,100); $timeout=10; $redis-&gt;set(&quot;abc&quot;,100,$timeout); $val=$redis-&gt;get('abc');  queue // 队列入 $redis-&gt;lPush(&quot;abc_list&quot;,&quot;ck1&quot;); $redis-&gt;lPush(&quot;abc_list&quot;,&quot;ck2&quot;); //队列出. $val=$redis-&gt;rPop(&quot;abc_list&quot;); //防超时 守护进程 出队列设计 $dbConn=false; while (true) { $key='xxx'; try { while ($val = $redis-&gt;rPop($key)) { if($dbConn){ //close db //open db $dbConn=false; } #code... } }catch (\Exception $e){ #code... # retry data $redis-&gt;rPush(&quot;$key&quot;,$val); } sleep(5); $dbConn=true; }  gis  cli //add 地理位置坐标 geoadd cities:locations 113.332406 23.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100  mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git-book on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/git-book/</link>
+    <description>Recent content in git-book on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Oct 2019 18:17:52 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/git-book/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Book</title>
+      <link>http://zhongyu2005.github.io/posts/git-book/</link>
+      <pubDate>Wed, 30 Oct 2019 18:17:52 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/git-book/</guid>
+      <description> start  安装node &amp;amp; npm 设置npm 国内源。 https://npm.taobao.org/ 安装 gitbook-cli .[cnpm install -g gitbook-cli] 确认是否安装。gitbook -V  config  gitbook init.生成首页和结构页 编辑 SUMMARY.md.（结构页） 再次gitbook init。生成对应文件。 根据文件md格式，编写电子书。
+# Summary * [简单介绍](README.md) * [第一章](chapter1/README.md) * [第一节](chapter1/section1.md) * [第二节](chapter1/section2.md) * [第二章](chapter2/README.md) * [第一节](chapter2/section1.md) * [第二节](chapter2/section2.md) * [结束](end/README.md)   generate  gitbook serve 。本地预览 gitbook build —output=./dist/v1 生成book文件夹. 还可以直接生成pdf  </description>
+    </item>
+    
+  </channel>
+</rss>

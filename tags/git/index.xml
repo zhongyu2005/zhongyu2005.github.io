@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/git/</link>
+    <description>Recent content in git on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Oct 2019 18:17:55 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git</title>
+      <link>http://zhongyu2005.github.io/posts/git/</link>
+      <pubDate>Wed, 30 Oct 2019 18:17:55 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/git/</guid>
+      <description>start  git init (初始化空仓库) git clone xxx (从远程仓库克隆一份到本地) git add xxx (加入仓库) git rm xxx (从仓库删除) git commit -m &amp;ldquo;commit xxx&amp;rdquo; (提交到仓库) git push (上传到远程仓库) git status (查看git 仓库的状态.) git diff (查看提交文件内容改动) git log (查看提交历史) git fetch (更新)  reset  git reset &amp;ndash;hard commit_id (回退到指定版本) git checkout xxx (回退文件到当前的版本，放弃修改。) git reset HEAD xxx (取消文件 add)  branch  git branch (查看本地分支) git branch -a (查看远程分支) git branch xxx (创建分支) git checkout xxx (切换分支) git switch xxx (切换分支) git checkout -b xxx (创建并切换分支) git switch -c xxx (创建并切换分支) git merge xxx (把xxx分支合并到当前分支) git pull origin xxx (把xxx分支合并到当前分支) git branch -d xx (删除分支)  stash  git stash （把当前修改存储） git stash list （查看stash） git stash apply stash@{0} (还原stash修改) git stash drop stash@{0} (丢弃stash) git stash pop stash@{0} （还原stash修改并丢弃）  tag  git tag xxx commit(根据commit打tag,没有则当前) git tag （查看tag) git show xxx (查看tag的内容) git tag -d xxx (删除tag)  config  git config &amp;ndash;global user.</description>
+    </item>
+    
+    <item>
+      <title>Git Book</title>
+      <link>http://zhongyu2005.github.io/posts/git-book/</link>
+      <pubDate>Wed, 30 Oct 2019 18:17:52 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/git-book/</guid>
+      <description> start  安装node &amp;amp; npm 设置npm 国内源。 https://npm.taobao.org/ 安装 gitbook-cli .[cnpm install -g gitbook-cli] 确认是否安装。gitbook -V  config  gitbook init.生成首页和结构页 编辑 SUMMARY.md.（结构页） 再次gitbook init。生成对应文件。 根据文件md格式，编写电子书。
+# Summary * [简单介绍](README.md) * [第一章](chapter1/README.md) * [第一节](chapter1/section1.md) * [第二节](chapter1/section2.md) * [第二章](chapter2/README.md) * [第一节](chapter2/section1.md) * [第二节](chapter2/section2.md) * [结束](end/README.md)   generate  gitbook serve 。本地预览 gitbook build —output=./dist/v1 生成book文件夹. 还可以直接生成pdf  </description>
+    </item>
+    
+  </channel>
+</rss>

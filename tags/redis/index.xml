@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redis on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/redis/</link>
+    <description>Recent content in redis on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Oct 2019 17:10:14 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Redis</title>
+      <link>http://zhongyu2005.github.io/posts/php-redis/</link>
+      <pubDate>Wed, 30 Oct 2019 17:10:14 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-redis/</guid>
+      <description>php connect $host=&#39;127.0.0.1&#39;; $port=&#39;6389&#39;; $password=&#39;pass&#39;; $redis=new \Redis(); $redis-&amp;gt;connect($host,$port,100); //$redis-&amp;gt;auth($password); $redis-&amp;gt;select(0);  cache $redis-&amp;gt;set(&amp;quot;abc&amp;quot;,100); $timeout=10; $redis-&amp;gt;set(&amp;quot;abc&amp;quot;,100,$timeout); $val=$redis-&amp;gt;get(&#39;abc&#39;);  queue // 队列入 $redis-&amp;gt;lPush(&amp;quot;abc_list&amp;quot;,&amp;quot;ck1&amp;quot;); $redis-&amp;gt;lPush(&amp;quot;abc_list&amp;quot;,&amp;quot;ck2&amp;quot;); //队列出. $val=$redis-&amp;gt;rPop(&amp;quot;abc_list&amp;quot;); //防超时 守护进程 出队列设计 $dbConn=false; while (true) { $key=&#39;xxx&#39;; try { while ($val = $redis-&amp;gt;rPop($key)) { if($dbConn){ //close db //open db $dbConn=false; } #code... } }catch (\Exception $e){ #code... # retry data $redis-&amp;gt;rPush(&amp;quot;$key&amp;quot;,$val); } sleep(5); $dbConn=true; }  gis  cli //add 地理位置坐标 geoadd cities:locations 113.332406 23.</description>
+    </item>
+    
+  </channel>
+</rss>

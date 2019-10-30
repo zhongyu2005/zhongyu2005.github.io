@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://zhongyu2005.github.io/" />
 
-<meta property="og:updated_time" content="2019-10-29T19:09:38+08:00" />
+<meta property="og:updated_time" content="2019-10-30T18:17:55+08:00" />
 <meta itemprop="name" content="Spade Three">
 <meta itemprop="description" content="power by hugo ananke ">
 
@@ -138,14 +138,14 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://zhongyu2005.github.io/posts/php-db/" class="color-inherit dim link">
-            Php Db
+          <a href="http://zhongyu2005.github.io/posts/git/" class="color-inherit dim link">
+            Git
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          php sqlite public function getSqlite($path) { if (empty($this-&gt;dbs[$path])) { $this-&gt;dbs[$path] = new \SQLite3($path); } return $this-&gt;dbs[$path]; } public function dbExec($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } return $sm-&gt;execute(); // $db-&gt;lastErrorMsg() } public function dbQueryOne($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!empty($bindParam)){ foreach ($bindParam as $key=&gt;$val) { $sm-&gt;bindValue($key, $val); } } $res = $sm-&gt;execute(); $row = $res-&gt;fetchArray(SQLITE3_ASSOC); return $row; } public function dbQueryAll($db, $sql,$bindParam) { $sm=$db-&gt;prepare($sql); if(!
+          start  git init (初始化空仓库) git clone xxx (从远程仓库克隆一份到本地) git add xxx (加入仓库) git rm xxx (从仓库删除) git commit -m &ldquo;commit xxx&rdquo; (提交到仓库) git push (上传到远程仓库) git status (查看git 仓库的状态.) git diff (查看提交文件内容改动) git log (查看提交历史) git fetch (更新)  reset  git reset &ndash;hard commit_id (回退到指定版本) git checkout xxx (回退文件到当前的版本，放弃修改。) git reset HEAD xxx (取消文件 add)  branch  git branch (查看本地分支) git branch -a (查看远程分支) git branch xxx (创建分支) git checkout xxx (切换分支) git switch xxx (切换分支) git checkout -b xxx (创建并切换分支) git switch -c xxx (创建并切换分支) git merge xxx (把xxx分支合并到当前分支) git pull origin xxx (把xxx分支合并到当前分支) git branch -d xx (删除分支)  stash  git stash （把当前修改存储） git stash list （查看stash） git stash apply stash@{0} (还原stash修改) git stash drop stash@{0} (丢弃stash) git stash pop stash@{0} （还原stash修改并丢弃）  tag  git tag xxx commit(根据commit打tag,没有则当前) git tag （查看tag) git show xxx (查看tag的内容) git tag -d xxx (删除tag)  config  git config &ndash;global user.
         </div>
-          <a href="http://zhongyu2005.github.io/posts/php-db/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://zhongyu2005.github.io/posts/git/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -162,14 +162,15 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://zhongyu2005.github.io/posts/php-upload/" class="color-inherit dim link">
-            Php Upload
+          <a href="http://zhongyu2005.github.io/posts/git-book/" class="color-inherit dim link">
+            Git Book
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          upload php $file = $_FILES['file']; if (empty($file)) { return log(&quot;未获取到上传数据&quot;, 1); } $maxSize = 1024 * 1024 * 3;//3m if ($file['size'] &gt; $maxSize) { return log(&quot;上传数据大小超过限制&quot;, 1); } if (!in_array($file['type'], ['image/jpeg', 'image/png', 'image/gif'])) { log(&quot;上传文件类型不正确&quot;, 1); } $suffix = pathinfo($file['name'], PATHINFO_EXTENSION); //文件后缀 $suffix = strtolower($suffix); if (!in_array($suffix, array('jpg', 'png', 'gif', 'jpeg'))) { return log(&quot;上传文件类型不正确&quot;, 1); } $path = __DIR__ . '/img'; $name = '/' . date(&quot;Ym&quot;) . '/' . md5(uniqid('dp', true)) .
+           start  安装node &amp; npm 设置npm 国内源。 https://npm.taobao.org/ 安装 gitbook-cli .[cnpm install -g gitbook-cli] 确认是否安装。gitbook -V  config  gitbook init.生成首页和结构页 编辑 SUMMARY.md.（结构页） 再次gitbook init。生成对应文件。 根据文件md格式，编写电子书。
+# Summary * [简单介绍](README.md) * [第一章](chapter1/README.md) * [第一节](chapter1/section1.md) * [第二节](chapter1/section2.md) * [第二章](chapter2/README.md) * [第一节](chapter2/section1.md) * [第二节](chapter2/section2.md) * [结束](end/README.md)   generate  gitbook serve 。本地预览 gitbook build —output=./dist/v1 生成book文件夹. 还可以直接生成pdf  
         </div>
-          <a href="http://zhongyu2005.github.io/posts/php-upload/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://zhongyu2005.github.io/posts/git-book/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -186,14 +187,15 @@
       
       <div class="blah w-100">
         <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="http://zhongyu2005.github.io/posts/php-date/" class="color-inherit dim link">
-            Php Date
+          <a href="http://zhongyu2005.github.io/posts/py-supervisor/" class="color-inherit dim link">
+            Py Supervisor
             </a>
         </h1>
         <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-           php date $date = new \DateTime(null, new \DateTimeZone(&quot;PRC&quot;)); $ymd = $date-&gt;format(&quot;Y-m-d H:i:s&quot;); $time = $date-&gt;getTimestamp(); $date-&gt;modify(&quot;-1 day -1 hour &quot;);//减一天，减一个小时 $date-&gt;modify(&quot;this week today&quot;);//本周第一天，周一开始，仅保留年月日 $diff=$date-&gt;diff(new \DateTime('20191001',new \DateTimeZone(&quot;PRC&quot;))); $s=$diff-&gt;format(&quot;相差%Y年%m月%d日 %H时%i分%s秒&quot;);  
+          start  pip3 install supervisor echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf vim supervisord.conf(，开启include，set user pass。http) supervisord -c supervisord.conf （，启动） 参考配置如下 localhost:9001端口
+[program:test] command=/usr/bin/php -r &quot;echo date('Ymd H:i:s'),PHP_EOL;&quot; ; the program (relative uses PATH, can take args) process_name=%(process_num)s ; process_name expr (default %(program_name)s) numprocs=1 ; number of processes copies to start (def 1) directory=/opt/www ; directory to cwd to before exec (def no cwd) priority=999 ; the relative start priority (default 999) autostart=true ; start at supervisord start (default: true) autorestart=true ; when to restart if exited after running (def: unexpected) user=zhongyu ; setuid to this UNIX account to run the program redirect_stderr=true ; redirect proc stderr to stdout (default false) stdout_logfile=/var/log/supervisor/test.
         </div>
-          <a href="http://zhongyu2005.github.io/posts/php-date/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
+          <a href="http://zhongyu2005.github.io/posts/py-supervisor/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
         
       </div>
     </div>
@@ -210,26 +212,26 @@
         
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://zhongyu2005.github.io/posts/php-curl/" class="link black dim">
-              Php Curl
+            <a href="http://zhongyu2005.github.io/posts/php-mongodb/" class="link black dim">
+              Php Mongodb
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://zhongyu2005.github.io/posts/php-ip/" class="link black dim">
-              Php Ip
+            <a href="http://zhongyu2005.github.io/posts/php-amqp/" class="link black dim">
+              Php Amqp
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://zhongyu2005.github.io/posts/php-filter/" class="link black dim">
-              Php Filter
+            <a href="http://zhongyu2005.github.io/posts/php-redis/" class="link black dim">
+              Php Redis
             </a>
           </h2>
         
           <h2 class="f5 fw4 mb4 dib mr3">
-            <a href="http://zhongyu2005.github.io/posts/php-composer/" class="link black dim">
-              Php Composer
+            <a href="http://zhongyu2005.github.io/posts/php-db/" class="link black dim">
+              Php Db
             </a>
           </h2>
         

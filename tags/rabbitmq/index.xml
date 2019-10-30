@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rabbitmq on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/rabbitmq/</link>
+    <description>Recent content in rabbitmq on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 30 Oct 2019 17:20:14 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/rabbitmq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Amqp</title>
+      <link>http://zhongyu2005.github.io/posts/php-amqp/</link>
+      <pubDate>Wed, 30 Oct 2019 17:20:14 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-amqp/</guid>
+      <description>rabbitmqctl rabbitmq-server start rabbitmq-server status rabbitmq-server stop 简单管理 查看所有用户 rabbitmqctl list_users 查看某个用户的权限 rabbitmqctl list_user_permissions username 删除某个用户 rabbitmqctl list_user_permissions username 添加某个用户 rabbitmqctl add_user username password 设置用户tag rabbitmqctl set_user_tags username administrator 授权某个用户 rabbitmqctl set_permissions -p / username &amp;quot;.*&amp;quot; &amp;quot;.*&amp;quot; &amp;quot;.*&amp;quot; 开启web管理界面 127.0.0.1:15672 rabbitmq-plugins enable rabbitmq_management  php-amqp #安装好phpamqp的扩展 $config=[ &#39;host&#39; =&amp;gt; &#39;127.0.0.1&#39;, &#39;port&#39; =&amp;gt; 5672, &#39;login&#39; =&amp;gt; &#39;username&#39;, &#39;password&#39; =&amp;gt; &#39;your pass&#39;, &#39;vhost&#39; =&amp;gt; &#39;/&#39;, &#39;heartbeat&#39; =&amp;gt; 60, ] 删除某个Exchange 和 Queue $con = new \AMQPConnection($config); $con-&amp;gt;connect(); $channel = new \AMQPChannel($con); $exchange = new \AMQPExchange($channel); $exchange-&amp;gt;delete(&#39;your exchange name&#39;); $queue = new \AMQPQueue($channel); $queue-&amp;gt;setName(&#39;your queue name&#39;); $queue-&amp;gt;delete(); $con-&amp;gt;disconnect();  重试队列1 （注意expiration 时间，可能受队列先后顺序影响.</description>
+    </item>
+    
+  </channel>
+</rss>

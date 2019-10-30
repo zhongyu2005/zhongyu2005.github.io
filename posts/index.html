@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://zhongyu2005.github.io/posts/" />
 
-<meta property="og:updated_time" content="2019-10-29T19:09:38+08:00" />
+<meta property="og:updated_time" content="2019-10-30T18:17:55+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -106,6 +106,98 @@
   <div class="bg-white mb3 pa4 gray overflow-hidden">
     <span class="f6 db">Posts</span>
     <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/git/" class="link black dim">
+        Git
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      start  git init (初始化空仓库) git clone xxx (从远程仓库克隆一份到本地) git add xxx (加入仓库) git rm xxx (从仓库删除) git commit -m &ldquo;commit xxx&rdquo; (提交到仓库) git push (上传到远程仓库) git status (查看git 仓库的状态.) git diff (查看提交文件内容改动) git log (查看提交历史) git fetch (更新)  reset  git reset &ndash;hard commit_id (回退到指定版本) git checkout xxx (回退文件到当前的版本，放弃修改。) git reset HEAD xxx (取消文件 add)  branch  git branch (查看本地分支) git branch -a (查看远程分支) git branch xxx (创建分支) git checkout xxx (切换分支) git switch xxx (切换分支) git checkout -b xxx (创建并切换分支) git switch -c xxx (创建并切换分支) git merge xxx (把xxx分支合并到当前分支) git pull origin xxx (把xxx分支合并到当前分支) git branch -d xx (删除分支)  stash  git stash （把当前修改存储） git stash list （查看stash） git stash apply stash@{0} (还原stash修改) git stash drop stash@{0} (丢弃stash) git stash pop stash@{0} （还原stash修改并丢弃）  tag  git tag xxx commit(根据commit打tag,没有则当前) git tag （查看tag) git show xxx (查看tag的内容) git tag -d xxx (删除tag)  config  git config &ndash;global user.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/git-book/" class="link black dim">
+        Git Book
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       start  安装node &amp; npm 设置npm 国内源。 https://npm.taobao.org/ 安装 gitbook-cli .[cnpm install -g gitbook-cli] 确认是否安装。gitbook -V  config  gitbook init.生成首页和结构页 编辑 SUMMARY.md.（结构页） 再次gitbook init。生成对应文件。 根据文件md格式，编写电子书。
+# Summary * [简单介绍](README.md) * [第一章](chapter1/README.md) * [第一节](chapter1/section1.md) * [第二节](chapter1/section2.md) * [第二章](chapter2/README.md) * [第一节](chapter2/section1.md) * [第二节](chapter2/section2.md) * [结束](end/README.md)   generate  gitbook serve 。本地预览 gitbook build —output=./dist/v1 生成book文件夹. 还可以直接生成pdf  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/py-supervisor/" class="link black dim">
+        Py Supervisor
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      start  pip3 install supervisor echo_supervisord_conf &gt; /etc/supervisor/supervisord.conf vim supervisord.conf(，开启include，set user pass。http) supervisord -c supervisord.conf （，启动） 参考配置如下 localhost:9001端口
+[program:test] command=/usr/bin/php -r &quot;echo date('Ymd H:i:s'),PHP_EOL;&quot; ; the program (relative uses PATH, can take args) process_name=%(process_num)s ; process_name expr (default %(program_name)s) numprocs=1 ; number of processes copies to start (def 1) directory=/opt/www ; directory to cwd to before exec (def no cwd) priority=999 ; the relative start priority (default 999) autostart=true ; start at supervisord start (default: true) autorestart=true ; when to restart if exited after running (def: unexpected) user=zhongyu ; setuid to this UNIX account to run the program redirect_stderr=true ; redirect proc stderr to stdout (default false) stdout_logfile=/var/log/supervisor/test.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-mongodb/" class="link black dim">
+        Php Mongodb
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      mongodb gis  https://github.com/mongodb/mongo-php-library // 加入composer支持 require_once __DIR__ . &quot;/vendor/autoload.php&quot;; $action=''; if($action=='setIndex'){ $collection = ( new MongoDB\Client )-&gt;momo-&gt;user; $result = $collection-&gt;createIndex(array('loc'=&gt;'2dsphere')); var_dump( $result ); exit; } if($acion=='create'){ $collection = ( new MongoDB\Client )-&gt;momo-&gt;user; $longitude='113.281777'; $latitude='23.171306'; $i=2; //id=1,113.332406,23.123305 $insert = $collection-&gt;insertOne( [ '_id' =&gt; $i, 'loc' =&gt; array( 'type' =&gt; 'Point', 'coordinates' =&gt; array( floatval( $longitude ), floatval( $latitude ) ), ), ]); var_dump( $insert ); } if($action=='query'){ $database = ( new MongoDB\Client )-&gt;momo; $cursor = $database-&gt;command( array( 'geoNear' =&gt; 'user', 'near' =&gt; array( 'type' =&gt; 'Point', 'coordinates' =&gt; array( 113.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-amqp/" class="link black dim">
+        Php Amqp
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      rabbitmqctl rabbitmq-server start rabbitmq-server status rabbitmq-server stop 简单管理 查看所有用户 rabbitmqctl list_users 查看某个用户的权限 rabbitmqctl list_user_permissions username 删除某个用户 rabbitmqctl list_user_permissions username 添加某个用户 rabbitmqctl add_user username password 设置用户tag rabbitmqctl set_user_tags username administrator 授权某个用户 rabbitmqctl set_permissions -p / username &quot;.*&quot; &quot;.*&quot; &quot;.*&quot; 开启web管理界面 127.0.0.1:15672 rabbitmq-plugins enable rabbitmq_management  php-amqp #安装好phpamqp的扩展 $config=[ 'host' =&gt; '127.0.0.1', 'port' =&gt; 5672, 'login' =&gt; 'username', 'password' =&gt; 'your pass', 'vhost' =&gt; '/', 'heartbeat' =&gt; 60, ] 删除某个Exchange 和 Queue $con = new \AMQPConnection($config); $con-&gt;connect(); $channel = new \AMQPChannel($con); $exchange = new \AMQPExchange($channel); $exchange-&gt;delete('your exchange name'); $queue = new \AMQPQueue($channel); $queue-&gt;setName('your queue name'); $queue-&gt;delete(); $con-&gt;disconnect();  重试队列1 （注意expiration 时间，可能受队列先后顺序影响.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-redis/" class="link black dim">
+        Php Redis
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      php connect $host='127.0.0.1'; $port='6389'; $password='pass'; $redis=new \Redis(); $redis-&gt;connect($host,$port,100); //$redis-&gt;auth($password); $redis-&gt;select(0);  cache $redis-&gt;set(&quot;abc&quot;,100); $timeout=10; $redis-&gt;set(&quot;abc&quot;,100,$timeout); $val=$redis-&gt;get('abc');  queue // 队列入 $redis-&gt;lPush(&quot;abc_list&quot;,&quot;ck1&quot;); $redis-&gt;lPush(&quot;abc_list&quot;,&quot;ck2&quot;); //队列出. $val=$redis-&gt;rPop(&quot;abc_list&quot;); //防超时 守护进程 出队列设计 $dbConn=false; while (true) { $key='xxx'; try { while ($val = $redis-&gt;rPop($key)) { if($dbConn){ //close db //open db $dbConn=false; } #code... } }catch (\Exception $e){ #code... # retry data $redis-&gt;rPush(&quot;$key&quot;,$val); } sleep(5); $dbConn=true; }  gis  cli //add 地理位置坐标 geoadd cities:locations 113.332406 23.
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
       <a href="http://zhongyu2005.github.io/posts/php-db/" class="link black dim">
         Php Db
       </a>
@@ -162,85 +254,51 @@
 </div>
 </div>
       
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://zhongyu2005.github.io/posts/php-ip/" class="link black dim">
-        Php Ip
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       php getId function getIP() { if (isset($_SERVER)) { if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) { $realip = $_SERVER['HTTP_X_FORWARDED_FOR']; } elseif (isset($_SERVER['HTTP_CLIENT_IP'])) { $realip = $_SERVER['HTTP_CLIENT_IP']; } else { $realip = $_SERVER['REMOTE_ADDR']; } } else { if (getenv(&quot;HTTP_X_FORWARDED_FOR&quot;)) { $realip = getenv( &quot;HTTP_X_FORWARDED_FOR&quot;); } elseif (getenv(&quot;HTTP_CLIENT_IP&quot;)) { $realip = getenv(&quot;HTTP_CLIENT_IP&quot;); } else { $realip = getenv(&quot;REMOTE_ADDR&quot;); } } if(empty($realip) || strtolower($realip)=='unknown'){ return ''; } return $realip; }  
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://zhongyu2005.github.io/posts/php-filter/" class="link black dim">
-        Php Filter
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      filter 验证 ip $ip = &quot;192.168.0.1&quot;; //$ip = &quot;2001:0db8:85a3:08d3:1319:8a2e:0370:7334&quot;; if(!filter_var($ip, FILTER_VALIDATE_IP,FILTER_FLAG_IPV6)){ echo &quot;IP is not valid&quot;; }else { echo &quot;IP is valid&quot;; }  filter 验证 email $email = &quot;someone@example.com&quot;; if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ echo &quot;E-mail is not valid&quot;; }else{ echo &quot;E-mail is valid&quot;; }  filter 验证 email $email = &quot;someone@example.com&quot;; if(!filter_var($email, FILTER_VALIDATE_EMAIL)){ echo &quot;E-mail is not valid&quot;; }else{ echo &quot;E-mail is valid&quot;; }  filter 验证 email $url = &quot;http://www.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://zhongyu2005.github.io/posts/php-composer/" class="link black dim">
-        Php Composer
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      composer php -r &quot;copy('https://getcomposer.org/installer', 'composer-setup.php');&quot; php -r &quot;if (hash_file('sha384', 'composer-setup.php') === 'a5c698ffe4b8e849a443b120cd5ba38043260d5c4023dbf93e1558871f1f07f58274fc6f4c93bcfd858c6bd0775cd8d1') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;&quot; php composer-setup.php php -r &quot;unlink('composer-setup.php');&quot; echo @php &quot;%~dp0composer.phar&quot; %*&gt;composer.bat composer -V php composer.phar self-update  composer use  php composer.phar create-project doctrine/orm path 2.2.* AND php composer.phar require xxx php composer.phar remove xxx OR edit composer.json php composer.phar install php composer.phar update php composer.
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://zhongyu2005.github.io/posts/php-ini/" class="link black dim">
-        Php Ini
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-      ini_set ini_set('display_errors', true);//开启错误信息显示 ini_set(&quot;error_log&quot;, __DIR__.'/'. date('Y-m-d') . &quot;.log&quot;);//设置php错误路径 ini_set('date.timezone','Asia/Shanghai'); ini_set('max_execution_time', 0);//不限制执行时间 ini_set('magic_quotes_runtime', 0);//关闭自动反斜线转移引号 ini_set('memory_limit', '512M'); ignore_user_abort(true); // 后台运行 set_time_limit(0); // 取消脚本运行时间的超时上限  header  header(&quot;Content-type: text/html; charset=utf-8&quot;); header('Content-Type:application/json; charset=utf-8'); header('Access-Control-Allow-Origin:*'); header(&quot;Access-Control-Allow-Methods&quot;,&quot;POST&quot;); header(&quot;Access-Control-Allow-Credentials&quot;,&quot;true&quot;); header('Access-Control-Allow-Headers:x-requested-with,content-type'); header(&quot;HTTP/1.1 404 Not Found&quot;); header(&quot;Status: 404 Not Found&quot;);  memory  function getMemory($real = false) { $size = memory_get_usage($real); $unit = array('b', 'kb', 'mb', 'gb', 'tb', 'pb'); return @round($size / pow(1024, ($i = floor(log($size, 1024)))), 2) .
-    </div>
-  </div>
-</div>
-</div>
-      
-        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
-  <div class="bg-white mb3 pa4 gray overflow-hidden">
-    <span class="f6 db">Posts</span>
-    <h1 class="f3 near-black">
-      <a href="http://zhongyu2005.github.io/posts/welcome/" class="link black dim">
-        welcome
-      </a>
-    </h1>
-    <div class="nested-links f5 lh-copy nested-copy-line-height">
-       Welcom to spade. hugo help
-hugo version hugo new site xxx hugo new posts/welcome.md hugo server -D hugo (cp -R public ../../spade.github.io)  config.tomal
-baseURL = &quot;http://zhongyu2005.github.io&quot; languageCode = &quot;en-us&quot; title = &quot;Spade Three&quot; theme = &quot;ananke&quot; [taxonomies] tag = &quot;tags&quot;  posts/welcome.md
---- title: &quot;welcome&quot; date: 2019-10-29T12:51:26+08:00 tags: [&quot;welcome&quot;] --- Welcom to spade. xxxx  
-    </div>
-  </div>
-</div>
-</div>
-      
     </section>
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/posts/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item disabled">
+    <a  class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/posts/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/posts/page/2/">2</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/posts/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/posts/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
 
 </article>
 

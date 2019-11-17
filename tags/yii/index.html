@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Spade Three  | yii</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.59.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.d98f2eb6bcd1eaedb7edf166bd16af26.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+    
+
+    
+    
+      <link href="/tags/yii/index.xml" rel="alternate" type="application/rss+xml" title="Spade Three" />
+      <link href="/tags/yii/index.xml" rel="feed" type="application/rss+xml" title="Spade Three" />
+      
+    
+    
+    <meta property="og:title" content="yii" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://zhongyu2005.github.io/tags/yii/" />
+
+<meta property="og:updated_time" content="2019-11-17T16:58:27+08:00" />
+<meta itemprop="name" content="yii">
+<meta itemprop="description" content="">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="yii"/>
+<meta name="twitter:description" content=""/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="pb3-m pb6-l bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="http://zhongyu2005.github.io" class="f3 fw2 hover-white no-underline white-90 dib">
+      Spade Three
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/about/" title="About page">
+              About
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv3 ph3 ph4-ns">
+        <h1 class="f2 f-subheadline-l fw2 light-silver mb0 lh-title">
+          yii
+        </h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <article class="cf pa3 pa4-m pa4-l">
+    <div class="measure-wide-l center f4 lh-copy nested-copy-line-height nested-links nested-img mid-gray">
+      <p>Below you will find pages that utilize the taxonomy term “yii”</p>
+    </div>
+  </article>
+  <div class="mw8 center">    
+    <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/yii-orm/" class="link black dim">
+        Yii Orm
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      config  config components db
+'components' =&gt; [ 'db' =&gt; [ 'class' =&gt; 'yii\db\Connection', 'dsn' =&gt; 'mysql:host=localhost;dbname=testdb', 'username' =&gt; 'demo', 'password' =&gt; 'demo', ], ]   use it use yii; //sample Yii::$app-&gt;db-&gt;createCommand($sql)-&gt;execute(); Yii::$app-&gt;db-&gt;createCommand($sql)-&gt;fetchAll(); Yii::$app-&gt;db-&gt;createCommand($sql)-&gt;getRawSql(); $query=new yii\db\Query(); $id=$query-&gt;from($table)-&gt;select('id')-&gt;where($where)-&gt;scalar(); $row=$query-&gt;from($table)-&gt;select('id')-&gt;where($where)-&gt;one(); $array=$query-&gt;from($table)-&gt;select('id')-&gt;where($where)-&gt;all();  transaction Customer::getDb()-&gt;transaction(function($db) use ($customer) { $customer-&gt;id = 200; $customer-&gt;save(); // ...other DB operations... }); // or alternatively $transaction = Customer::getDb()-&gt;beginTransaction(); try { $customer-&gt;id = 200; $customer-&gt;save(); // ...other DB operations.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/yii-log/" class="link black dim">
+        Yii Log
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      log something use yii; Yii::trace()：记录一条消息去跟踪一段代码是怎样运行的。这主要在开发的时候使用。 Yii::info()：记录一条消息来传达一些有用的信息。 Yii::warning()：记录一个警告消息用来指示一些已经发生的意外。 Yii::error()：记录一个致命的错误，这个错误应该尽快被检查。  log config for config 下 配置component return [ // 必须在引导期间加载“log”组件 'bootstrap' =&gt; ['log'], // “log”组件处理带时间戳的消息。 设置 PHP 时区以创建正确的时间戳 'timeZone' =&gt; 'PRC', 'components' =&gt; [ 'log' =&gt; [ 'targets' =&gt; [ [ 'class' =&gt; 'yii\log\DbTarget', 'levels' =&gt; ['error', 'warning'], ] ], ], ], ];  use monolog use Monolog\Logger; use Monolog\Handler\StreamHandler; use Monolog\Formatter\LineFormatter; $log = new Logger('app'); // 默认的日期格式是 &quot;Y-m-d H:i:s&quot; $dateFormat = &quot;Y-m-d H:i:s&quot;; // 默认的输出格式是 &quot;[%datetime%] %channel%.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+    </section>
+  </div>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://zhongyu2005.github.io" >
+    &copy; 2019 Spade Three
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>

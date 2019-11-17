@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>php-myadmin on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/php-myadmin/</link>
+    <description>Recent content in php-myadmin on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Nov 2019 17:12:01 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/php-myadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Php Myadmin</title>
+      <link>http://zhongyu2005.github.io/posts/php-myadmin/</link>
+      <pubDate>Sun, 17 Nov 2019 17:12:01 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-myadmin/</guid>
+      <description> phpmyadmin 多host edit confi.inc.php $i++; /* Authentication type */ $cfg[&#39;Servers&#39;][$i][&#39;auth_type&#39;] = &#39;config&#39;; /* Server parameters */ $cfg[&#39;Servers&#39;][$i][&#39;host&#39;] = &#39;localhost&#39;; $cfg[&#39;Servers&#39;][$i][&#39;user&#39;] = &#39;root&#39;; $cfg[&#39;Servers&#39;][$i][&#39;password&#39;] = &#39;123456&#39;; $cfg[&#39;Servers&#39;][$i][&#39;compress&#39;] = false; $cfg[&#39;Servers&#39;][$i][&#39;AllowNoPassword&#39;] = true; $i++; /* Authentication type */ $cfg[&#39;Servers&#39;][$i][&#39;auth_type&#39;] = &#39;config&#39;; /* Server parameters */ $cfg[&#39;Servers&#39;][$i][&#39;host&#39;] = &#39;localhost2&#39;; $cfg[&#39;Servers&#39;][$i][&#39;user&#39;] = &#39;root&#39;; $cfg[&#39;Servers&#39;][$i][&#39;password&#39;] = &#39;123456&#39;; $cfg[&#39;Servers&#39;][$i][&#39;compress&#39;] = false; $cfg[&#39;Servers&#39;][$i][&#39;AllowNoPassword&#39;] = true;  </description>
+    </item>
+    
+  </channel>
+</rss>

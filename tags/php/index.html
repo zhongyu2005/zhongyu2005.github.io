@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://zhongyu2005.github.io/tags/php/" />
 
-<meta property="og:updated_time" content="2019-10-30T18:05:08+08:00" />
+<meta property="og:updated_time" content="2019-11-17T17:12:01+08:00" />
 <meta itemprop="name" content="php">
 <meta itemprop="description" content="">
 
@@ -105,6 +105,58 @@
   </article>
   <div class="mw8 center">    
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-myadmin/" class="link black dim">
+        Php Myadmin
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       phpmyadmin 多host edit confi.inc.php $i++; /* Authentication type */ $cfg['Servers'][$i]['auth_type'] = 'config'; /* Server parameters */ $cfg['Servers'][$i]['host'] = 'localhost'; $cfg['Servers'][$i]['user'] = 'root'; $cfg['Servers'][$i]['password'] = '123456'; $cfg['Servers'][$i]['compress'] = false; $cfg['Servers'][$i]['AllowNoPassword'] = true; $i++; /* Authentication type */ $cfg['Servers'][$i]['auth_type'] = 'config'; /* Server parameters */ $cfg['Servers'][$i]['host'] = 'localhost2'; $cfg['Servers'][$i]['user'] = 'root'; $cfg['Servers'][$i]['password'] = '123456'; $cfg['Servers'][$i]['compress'] = false; $cfg['Servers'][$i]['AllowNoPassword'] = true;  
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/yii-orm/" class="link black dim">
+        Yii Orm
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      config  config components db
+'components' =&gt; [ 'db' =&gt; [ 'class' =&gt; 'yii\db\Connection', 'dsn' =&gt; 'mysql:host=localhost;dbname=testdb', 'username' =&gt; 'demo', 'password' =&gt; 'demo', ], ]   use it use yii; //sample Yii::$app-&gt;db-&gt;createCommand($sql)-&gt;execute(); Yii::$app-&gt;db-&gt;createCommand($sql)-&gt;fetchAll(); Yii::$app-&gt;db-&gt;createCommand($sql)-&gt;getRawSql(); $query=new yii\db\Query(); $id=$query-&gt;from($table)-&gt;select('id')-&gt;where($where)-&gt;scalar(); $row=$query-&gt;from($table)-&gt;select('id')-&gt;where($where)-&gt;one(); $array=$query-&gt;from($table)-&gt;select('id')-&gt;where($where)-&gt;all();  transaction Customer::getDb()-&gt;transaction(function($db) use ($customer) { $customer-&gt;id = 200; $customer-&gt;save(); // ...other DB operations... }); // or alternatively $transaction = Customer::getDb()-&gt;beginTransaction(); try { $customer-&gt;id = 200; $customer-&gt;save(); // ...other DB operations.
+    </div>
+  </div>
+</div>
+
+        </div>
+      
+        <div class="relative w-100  mb4 bg-white">
+          <div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/yii-log/" class="link black dim">
+        Yii Log
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      log something use yii; Yii::trace()：记录一条消息去跟踪一段代码是怎样运行的。这主要在开发的时候使用。 Yii::info()：记录一条消息来传达一些有用的信息。 Yii::warning()：记录一个警告消息用来指示一些已经发生的意外。 Yii::error()：记录一个致命的错误，这个错误应该尽快被检查。  log config for config 下 配置component return [ // 必须在引导期间加载“log”组件 'bootstrap' =&gt; ['log'], // “log”组件处理带时间戳的消息。 设置 PHP 时区以创建正确的时间戳 'timeZone' =&gt; 'PRC', 'components' =&gt; [ 'log' =&gt; [ 'targets' =&gt; [ [ 'class' =&gt; 'yii\log\DbTarget', 'levels' =&gt; ['error', 'warning'], ] ], ], ], ];  use monolog use Monolog\Logger; use Monolog\Handler\StreamHandler; use Monolog\Formatter\LineFormatter; $log = new Logger('app'); // 默认的日期格式是 &quot;Y-m-d H:i:s&quot; $dateFormat = &quot;Y-m-d H:i:s&quot;; // 默认的输出格式是 &quot;[%datetime%] %channel%.
+    </div>
+  </div>
+</div>
+
+        </div>
       
         <div class="relative w-100  mb4 bg-white">
           <div class="relative w-100 mb4 bg-white nested-copy-line-height">

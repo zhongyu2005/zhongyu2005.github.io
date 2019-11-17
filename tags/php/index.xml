@@ -6,10 +6,38 @@
     <description>Recent content in php on Spade Three</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Oct 2019 18:05:08 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 17:12:01 +0800</lastBuildDate>
     
 	<atom:link href="http://zhongyu2005.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Php Myadmin</title>
+      <link>http://zhongyu2005.github.io/posts/php-myadmin/</link>
+      <pubDate>Sun, 17 Nov 2019 17:12:01 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/php-myadmin/</guid>
+      <description> phpmyadmin 多host edit confi.inc.php $i++; /* Authentication type */ $cfg[&#39;Servers&#39;][$i][&#39;auth_type&#39;] = &#39;config&#39;; /* Server parameters */ $cfg[&#39;Servers&#39;][$i][&#39;host&#39;] = &#39;localhost&#39;; $cfg[&#39;Servers&#39;][$i][&#39;user&#39;] = &#39;root&#39;; $cfg[&#39;Servers&#39;][$i][&#39;password&#39;] = &#39;123456&#39;; $cfg[&#39;Servers&#39;][$i][&#39;compress&#39;] = false; $cfg[&#39;Servers&#39;][$i][&#39;AllowNoPassword&#39;] = true; $i++; /* Authentication type */ $cfg[&#39;Servers&#39;][$i][&#39;auth_type&#39;] = &#39;config&#39;; /* Server parameters */ $cfg[&#39;Servers&#39;][$i][&#39;host&#39;] = &#39;localhost2&#39;; $cfg[&#39;Servers&#39;][$i][&#39;user&#39;] = &#39;root&#39;; $cfg[&#39;Servers&#39;][$i][&#39;password&#39;] = &#39;123456&#39;; $cfg[&#39;Servers&#39;][$i][&#39;compress&#39;] = false; $cfg[&#39;Servers&#39;][$i][&#39;AllowNoPassword&#39;] = true;  </description>
+    </item>
+    
+    <item>
+      <title>Yii Orm</title>
+      <link>http://zhongyu2005.github.io/posts/yii-orm/</link>
+      <pubDate>Sun, 17 Nov 2019 16:58:27 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/yii-orm/</guid>
+      <description>config  config components db
+&#39;components&#39; =&amp;gt; [ &#39;db&#39; =&amp;gt; [ &#39;class&#39; =&amp;gt; &#39;yii\db\Connection&#39;, &#39;dsn&#39; =&amp;gt; &#39;mysql:host=localhost;dbname=testdb&#39;, &#39;username&#39; =&amp;gt; &#39;demo&#39;, &#39;password&#39; =&amp;gt; &#39;demo&#39;, ], ]   use it use yii; //sample Yii::$app-&amp;gt;db-&amp;gt;createCommand($sql)-&amp;gt;execute(); Yii::$app-&amp;gt;db-&amp;gt;createCommand($sql)-&amp;gt;fetchAll(); Yii::$app-&amp;gt;db-&amp;gt;createCommand($sql)-&amp;gt;getRawSql(); $query=new yii\db\Query(); $id=$query-&amp;gt;from($table)-&amp;gt;select(&#39;id&#39;)-&amp;gt;where($where)-&amp;gt;scalar(); $row=$query-&amp;gt;from($table)-&amp;gt;select(&#39;id&#39;)-&amp;gt;where($where)-&amp;gt;one(); $array=$query-&amp;gt;from($table)-&amp;gt;select(&#39;id&#39;)-&amp;gt;where($where)-&amp;gt;all();  transaction Customer::getDb()-&amp;gt;transaction(function($db) use ($customer) { $customer-&amp;gt;id = 200; $customer-&amp;gt;save(); // ...other DB operations... }); // or alternatively $transaction = Customer::getDb()-&amp;gt;beginTransaction(); try { $customer-&amp;gt;id = 200; $customer-&amp;gt;save(); // ...other DB operations.</description>
+    </item>
+    
+    <item>
+      <title>Yii Log</title>
+      <link>http://zhongyu2005.github.io/posts/yii-log/</link>
+      <pubDate>Sun, 17 Nov 2019 16:49:57 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/yii-log/</guid>
+      <description>log something use yii; Yii::trace()：记录一条消息去跟踪一段代码是怎样运行的。这主要在开发的时候使用。 Yii::info()：记录一条消息来传达一些有用的信息。 Yii::warning()：记录一个警告消息用来指示一些已经发生的意外。 Yii::error()：记录一个致命的错误，这个错误应该尽快被检查。  log config for config 下 配置component return [ // 必须在引导期间加载“log”组件 &#39;bootstrap&#39; =&amp;gt; [&#39;log&#39;], // “log”组件处理带时间戳的消息。 设置 PHP 时区以创建正确的时间戳 &#39;timeZone&#39; =&amp;gt; &#39;PRC&#39;, &#39;components&#39; =&amp;gt; [ &#39;log&#39; =&amp;gt; [ &#39;targets&#39; =&amp;gt; [ [ &#39;class&#39; =&amp;gt; &#39;yii\log\DbTarget&#39;, &#39;levels&#39; =&amp;gt; [&#39;error&#39;, &#39;warning&#39;], ] ], ], ], ];  use monolog use Monolog\Logger; use Monolog\Handler\StreamHandler; use Monolog\Formatter\LineFormatter; $log = new Logger(&#39;app&#39;); // 默认的日期格式是 &amp;quot;Y-m-d H:i:s&amp;quot; $dateFormat = &amp;quot;Y-m-d H:i:s&amp;quot;; // 默认的输出格式是 &amp;quot;[%datetime%] %channel%.</description>
+    </item>
     
     <item>
       <title>Php Mongodb</title>

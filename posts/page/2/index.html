@@ -35,7 +35,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://zhongyu2005.github.io/posts/" />
 
-<meta property="og:updated_time" content="2019-10-30T18:17:55+08:00" />
+<meta property="og:updated_time" content="2019-11-17T17:12:01+08:00" />
 <meta itemprop="name" content="Posts">
 <meta itemprop="description" content="">
 
@@ -101,6 +101,51 @@
   <article class="pa3 pa4-ns nested-copy-line-height nested-img">
     <section class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray"></section>
     <section class="flex-ns flex-wrap justify-around mt5">
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-upload/" class="link black dim">
+        Php Upload
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      upload php $file = $_FILES['file']; if (empty($file)) { return log(&quot;未获取到上传数据&quot;, 1); } $maxSize = 1024 * 1024 * 3;//3m if ($file['size'] &gt; $maxSize) { return log(&quot;上传数据大小超过限制&quot;, 1); } if (!in_array($file['type'], ['image/jpeg', 'image/png', 'image/gif'])) { log(&quot;上传文件类型不正确&quot;, 1); } $suffix = pathinfo($file['name'], PATHINFO_EXTENSION); //文件后缀 $suffix = strtolower($suffix); if (!in_array($suffix, array('jpg', 'png', 'gif', 'jpeg'))) { return log(&quot;上传文件类型不正确&quot;, 1); } $path = __DIR__ . '/img'; $name = '/' . date(&quot;Ym&quot;) . '/' . md5(uniqid('dp', true)) .
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-date/" class="link black dim">
+        Php Date
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+       php date $date = new \DateTime(null, new \DateTimeZone(&quot;PRC&quot;)); $ymd = $date-&gt;format(&quot;Y-m-d H:i:s&quot;); $time = $date-&gt;getTimestamp(); $date-&gt;modify(&quot;-1 day -1 hour &quot;);//减一天，减一个小时 $date-&gt;modify(&quot;this week today&quot;);//本周第一天，周一开始，仅保留年月日 $diff=$date-&gt;diff(new \DateTime('20191001',new \DateTimeZone(&quot;PRC&quot;))); $s=$diff-&gt;format(&quot;相差%Y年%m月%d日 %H时%i分%s秒&quot;);  
+    </div>
+  </div>
+</div>
+</div>
+      
+        <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
+  <div class="bg-white mb3 pa4 gray overflow-hidden">
+    <span class="f6 db">Posts</span>
+    <h1 class="f3 near-black">
+      <a href="http://zhongyu2005.github.io/posts/php-curl/" class="link black dim">
+        Php Curl
+      </a>
+    </h1>
+    <div class="nested-links f5 lh-copy nested-copy-line-height">
+      curl commonfunc function http($url, $data, $params = [], &amp;$error) { $timeout = isset($params['timeout']) ? $params['timeout'] : 10; // 默认超时时间是10秒 $curl = curl_init(); curl_setopt($curl, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_0); curl_setopt($curl, CURLOPT_URL, $url); curl_setopt($curl, CURLOPT_TIMEOUT, $timeout); //超时时间 curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, 0); //在发起连接前等待的时间，如果设置为0，则不等待 if (!empty($data)) { curl_setopt($curl, CURLOPT_POST, 1); curl_setopt($curl, CURLOPT_POSTFIELDS, $data); } curl_setopt($curl, CURLOPT_SSLVERSION, 1); //升级ssl curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false); //ssl curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false); //ssl curl_setopt($curl, CURLINFO_HEADER_OUT, true); $UserAgent = 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.
+    </div>
+  </div>
+</div>
+</div>
       
         <div class="relative w-100 w-30-l mb4 bg-white"><div class="relative w-100 mb4 bg-white nested-copy-line-height">
   <div class="bg-white mb3 pa4 gray overflow-hidden">

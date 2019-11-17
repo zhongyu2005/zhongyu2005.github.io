@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>yii-orm on Spade Three</title>
+    <link>http://zhongyu2005.github.io/tags/yii-orm/</link>
+    <description>Recent content in yii-orm on Spade Three</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 17 Nov 2019 16:58:27 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhongyu2005.github.io/tags/yii-orm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Yii Orm</title>
+      <link>http://zhongyu2005.github.io/posts/yii-orm/</link>
+      <pubDate>Sun, 17 Nov 2019 16:58:27 +0800</pubDate>
+      
+      <guid>http://zhongyu2005.github.io/posts/yii-orm/</guid>
+      <description>config  config components db
+&#39;components&#39; =&amp;gt; [ &#39;db&#39; =&amp;gt; [ &#39;class&#39; =&amp;gt; &#39;yii\db\Connection&#39;, &#39;dsn&#39; =&amp;gt; &#39;mysql:host=localhost;dbname=testdb&#39;, &#39;username&#39; =&amp;gt; &#39;demo&#39;, &#39;password&#39; =&amp;gt; &#39;demo&#39;, ], ]   use it use yii; //sample Yii::$app-&amp;gt;db-&amp;gt;createCommand($sql)-&amp;gt;execute(); Yii::$app-&amp;gt;db-&amp;gt;createCommand($sql)-&amp;gt;fetchAll(); Yii::$app-&amp;gt;db-&amp;gt;createCommand($sql)-&amp;gt;getRawSql(); $query=new yii\db\Query(); $id=$query-&amp;gt;from($table)-&amp;gt;select(&#39;id&#39;)-&amp;gt;where($where)-&amp;gt;scalar(); $row=$query-&amp;gt;from($table)-&amp;gt;select(&#39;id&#39;)-&amp;gt;where($where)-&amp;gt;one(); $array=$query-&amp;gt;from($table)-&amp;gt;select(&#39;id&#39;)-&amp;gt;where($where)-&amp;gt;all();  transaction Customer::getDb()-&amp;gt;transaction(function($db) use ($customer) { $customer-&amp;gt;id = 200; $customer-&amp;gt;save(); // ...other DB operations... }); // or alternatively $transaction = Customer::getDb()-&amp;gt;beginTransaction(); try { $customer-&amp;gt;id = 200; $customer-&amp;gt;save(); // ...other DB operations.</description>
+    </item>
+    
+  </channel>
+</rss>
